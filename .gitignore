@@ -1,0 +1,9 @@
+# Large / generated files - keep out of the repo
+*.db
+*.sqlite
+*.sqlite3
+raw_*.csv
+diversified_ecommerce_dataset.*
+~$*.xlsx
+.DS_Store
+Thumbs.db
