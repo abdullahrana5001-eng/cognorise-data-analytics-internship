@@ -1,0 +1,12 @@
+metric,excel_value,sql_value,status
+Orders,1000000.0,1000000,PASS
+Gross revenue,1005120741.96,1005120741.96,PASS
+Discounts,125817233.319,125817233.319,PASS
+Net revenue,879303508.641,879303508.641,PASS
+Tax collected,87937785.235025,87937785.235025,PASS
+Returns loss,92247205.6933136,92247205.6933136,PASS
+Shipping cost,24985224.0,24985224.0,PASS
+Contribution profit,762071078.947686,762071078.9476864,PASS
+ds_analytical rows,58050.0,58050,PASS
+ds_price_discount rows,150.0,150,PASS
+Internal: profit = net - returns - shipping,0.0,0.0,PASS

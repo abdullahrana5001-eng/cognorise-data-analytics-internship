@@ -1,0 +1,60 @@
+SQLite version: 3.45.1  (needs 3.25+ for window functions)
+Loading diversified_ecommerce_dataset.xlsx ... (1M rows takes 1-6 minutes, please wait)
+Loaded 1,000,000 rows into raw_ecommerce in 189s
+
+======================================================================
+RUNNING 01_data_cleaning.sql
+======================================================================
+  check_name | result
+  raw_row_count | 1000000
+  rows_with_null_or_blank | 0
+  duplicate_extra_copies | 0
+  invalid_numeric_ranges | 0
+  text_with_stray_spaces | 0
+  product_name_in_many_categories | 0
+  product_ids_with_many_names | 9000
+  product_ids_with_many_prices | 9000
+  check_name | result
+  clean_row_count | 1000000
+  rows_removed_in_cleaning | 0
+-- finished in 38s
+
+======================================================================
+RUNNING 02_analytical_dataset.sql
+======================================================================
+  item | n
+  ds_analytical rows | 58050
+  ds_price_discount rows | 150
+  fact_order_line rows | 1000000
+-- finished in 27s
+
+======================================================================
+RUNNING 03_kpi_analysis.sql
+======================================================================
+-- finished in 0s
+
+======================================================================
+RUNNING 04_additional_analysis.sql
+======================================================================
+-- finished in 0s
+
+======================================================================
+RUNNING 06_validation_checks.sql
+======================================================================
+  metric | excel_value | sql_value | status
+  Orders | 1,000,000.00 | 1000000 | PASS
+  Gross revenue | 1,005,120,741.96 | 1,005,120,741.96 | PASS
+  Discounts | 125,817,233.32 | 125,817,233.32 | PASS
+  Net revenue | 879,303,508.64 | 879,303,508.64 | PASS
+  Tax collected | 87,937,785.24 | 87,937,785.24 | PASS
+  Returns loss | 92,247,205.69 | 92,247,205.69 | PASS
+  Shipping cost | 24,985,224.00 | 24,985,224.00 | PASS
+  Contribution profit | 762,071,078.95 | 762,071,078.95 | PASS
+  ds_analytical rows | 58,050.00 | 58050 | PASS
+  ds_price_discount rows | 150.00 | 150 | PASS
+  Internal: profit = net - returns - shipping | 0.00 | 0.00 | PASS
+-- finished in 5s
+
+>>> VALIDATION: ALL PASS (11/11 PASS)
+Exported 58,050 rows -> /content/congorise-data-analytics-internship/Project3_Ecommerce_Analytics/congorise-data-analytics-internship/Project3_Ecommerce_Analytics/data/ds_analytical.csv
+Exported 150 rows -> /content/congorise-data-analytics-internship/Project3_Ecommerce_Analytics/congorise-data-analytics-internship/Project3_Ecommerce_Analytics/data/ds_price_discount.csv
