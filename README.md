@@ -1,4 +1,4 @@
-# Congorise Infotech - Data Analytics Internship (1 Month)
+# Cognorise Infotech - Data Analytics Internship (1 Month)
 
 Portfolio of internship projects. Each project lives in its own folder with SQL / Excel and its own README.
 
